@@ -1,17 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import App from './App'
-import Guides from './Guides'
-import './index.css'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <BrowserRouter basename="/leakshop-optimizers">
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/guides" element={<Guides />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
-)
+<HashRouter>
+  <Routes>
+    <Route path="/" element={<App />} />
+    <Route path="/guides" element={<Guides />} />
+    <Route path="/order" element={<Order />} />
+  </Routes>
+</HashRouter>

@@ -142,6 +142,10 @@ export default function App() {
               className="text-[#666] text-sm font-medium hover:text-white transition-colors duration-150">
               Гайды
             </a>
+            <a href="/order"
+              className="text-[#666] text-sm font-medium hover:text-white transition-colors duration-150">
+              Заказать
+            </a>
             {['Услуги', 'Отзывы', 'Контакты'].map(l => (
               <a key={l} href={`#${l.toLowerCase()}`}
                 className="text-[#666] text-sm font-medium hover:text-white transition-colors duration-150">
@@ -176,6 +180,11 @@ export default function App() {
               className="text-[#666] text-sm font-medium hover:text-white transition-colors"
               onClick={() => setMobileOpen(false)}>
               Гайды
+            </a>
+            <a href="/order"
+              className="text-[#666] text-sm font-medium hover:text-white transition-colors"
+              onClick={() => setMobileOpen(false)}>
+              Заказать
             </a>
             {['Услуги', 'Отзывы', 'Контакты'].map(l => (
               <a key={l} href={`#${l.toLowerCase()}`}
@@ -287,12 +296,11 @@ export default function App() {
           <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#111] border border-[#1A1A1A] rounded-2xl px-6 py-5">
             <div>
               <p className="font-bold text-white text-[15px] mb-0.5">Не знаешь что нужно?</p>
-              <p className="text-[#444] text-sm font-medium">Напиши в Discord — бесплатно проконсультируем и подберём услуги.</p>
+              <p className="text-[#444] text-sm font-medium">Оставь заявку — бесплатно проконсультируем и подберём услуги.</p>
             </div>
-            <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer"
+            <a href="/order"
               className="btn-shimmer shrink-0 flex items-center gap-2 bg-white text-black text-sm font-bold px-5 py-2.5 rounded-xl">
-              <IconDiscord />
-              Написать
+              Оставить заявку
             </a>
           </div>
         </div>
