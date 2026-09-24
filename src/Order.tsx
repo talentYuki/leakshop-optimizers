@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const DISCORD_WEBHOOK = 'https://discordapp.com/api/webhooks/1552746001276735628/PB7ZydahZTV3sndsx1-J7otucZWtyGispSZKmioqFJiPmrvDaHJ1fcWPJ102tdisRNFU'
+const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/ТВОЙ_URL'
 
 const SERVICES = [
   'Настройка ПК',

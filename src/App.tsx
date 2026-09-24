@@ -127,7 +127,7 @@ export default function App() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#1A1A1A] bg-[#0A0A0A]/92 backdrop-blur-lg">
         <div className="max-w-[1200px] mx-auto px-6 h-[60px] flex items-center justify-between gap-6">
 
-          <a href="/" className="flex items-center gap-2.5 shrink-0 group">
+          <a href="#/" className="flex items-center gap-2.5 shrink-0 group">
             <div className="w-7 h-7 bg-white rounded-lg flex items-center justify-center text-black transition-transform group-hover:scale-105">
               <IconLock />
             </div>
@@ -138,11 +138,11 @@ export default function App() {
           </a>
 
           <nav className="hidden md:flex items-center gap-7">
-            <a href="/guides"
+            <a href="#/guides"
               className="text-[#666] text-sm font-medium hover:text-white transition-colors duration-150">
               Гайды
             </a>
-            <a href="/order"
+            <a href="#/order"
               className="text-[#666] text-sm font-medium hover:text-white transition-colors duration-150">
               Заказать
             </a>
@@ -176,12 +176,12 @@ export default function App() {
 
         {mobileOpen && (
           <div className="md:hidden border-t border-[#1A1A1A] bg-[#0A0A0A] px-6 py-5 flex flex-col gap-4">
-            <a href="/guides"
+            <a href="#/guides"
               className="text-[#666] text-sm font-medium hover:text-white transition-colors"
               onClick={() => setMobileOpen(false)}>
               Гайды
             </a>
-            <a href="/order"
+            <a href="#/order"
               className="text-[#666] text-sm font-medium hover:text-white transition-colors"
               onClick={() => setMobileOpen(false)}>
               Заказать
@@ -238,10 +238,9 @@ export default function App() {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-20">
-            <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer"
+            <a href="#/order"
               className="btn-shimmer flex items-center gap-2 bg-white text-black font-bold text-sm px-6 py-3.5 rounded-2xl">
-              <IconDiscord />
-              Заказать в Discord
+              Заказать
             </a>
             <a href="#услуги"
               className="flex items-center gap-2 border border-[#1A1A1A] text-white font-semibold text-sm px-6 py-3.5 rounded-2xl hover:border-[#333] hover:bg-[#111] transition-all duration-200">
@@ -298,7 +297,7 @@ export default function App() {
               <p className="font-bold text-white text-[15px] mb-0.5">Не знаешь что нужно?</p>
               <p className="text-[#444] text-sm font-medium">Оставь заявку — бесплатно проконсультируем и подберём услуги.</p>
             </div>
-            <a href="/order"
+            <a href="#/order"
               className="btn-shimmer shrink-0 flex items-center gap-2 bg-white text-black text-sm font-bold px-5 py-2.5 rounded-xl">
               Оставить заявку
             </a>
