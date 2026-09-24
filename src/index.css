@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #333; }
+
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.8);
+  color: transparent;
+}
+
+.card-hover {
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  border-color: #2a2a2a;
+  background: #141414;
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.45s ease;
+}
+.btn-shimmer:hover::after { transform: translateX(100%); }
+.btn-shimmer:hover { transform: translateY(-1px); }
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.dot-pulse { animation: pulse-dot 2s ease-in-out infinite; }
+
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.012) 2px,
+    rgba(255,255,255,0.012) 4px
+  );
+}
+
+.sep { border: none; border-top: 1px solid #1A1A1A; }
